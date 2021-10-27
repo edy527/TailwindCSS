@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./tailwind.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <nav x-data="{ open: false }" class=" fixed z-10 w-full bg-secondary text-gray-100">
+    <div class="bg-secondary px-2 text-white flex justify-between items-center">
+      <div><img class="h-8 py-1" src="./img/logo-w.svg" alt="" /></div>
+      <div @click="open = ! open" class="text-3xl">&equiv;</div>
+    </div>
+
+    <div x-show="open">
+      <div class="mx-2 my-1">
+        <input type="search" placeholder="Buscar" class="w-full
+        leading-snug
+        text-gray-700
+        py-1
+        px-4
+        rounded
+        bg-gray-200
+        placeholder-secondary
+        border border-blue-300
+        hover:bg-white
+        focus:outline-none">
+      </div>
+      <div class="py-1 mx-2 md:flex justify-around">
+        <div class="flex">
+          Precio:
+          <div class="ml-2">$</div>
+          <div class="ml-2 text-primary">$$</div>
+          <div class="ml-2">$$$</div>
+          <div class="ml-2">$$$$</div>
+        </div>
+
+        <div class="flex">
+          <div class="mr-2">Calificacion</div>
+          <div class="text-primary">&starf;</div>
+          <div class="text-primary">&starf;</div>
+          <div class="text-primary">&starf;</div>
+          <div class="text-primary">&starf;</div>
+          <div>&starf;</div>
+        </div>
+        <div>
+          <button class="
+          px-4
+          py-1
+          rounded
+          shadow-xl
+          block
+          hover:shadow-none hover:bg-gray-700 hover:text-white bg-primary
+        ">Filtrar</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mb-8">
+    <div class="h-56 md:h-100 md:bg-center bg-no-repeat bg-cover bg-bottom" style="
+          background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80');
+        "></div>
+    <div class="container mx-auto md:flex">
+      <div class="mx-2 md:ml-2 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+        <div>
+          <img class="
+                w-full
+                rounded-lg
+                md:rounded-r-sm md:w-48
+                object-cover object-left
+                md:h-full
+              "
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500q=80"
+            alt="Imagen" />
+        </div>
+
+        <div class="
+              relative
+              mx-2
+              shadow-lg
+              md:shadow-none
+              p-2
+              bg-white
+              md:bg-transparent md:py-4
+              -mt-4
+              rounded-lg
+            ">
+          <h2 class="
+                text-xl
+                uppercase
+                font-semibold
+                tracking-tight
+                text-gray-900
+              ">
+            Hamburguesa Detonadora
+          </h2>
+          <p class="text-lg text-gray-700 leading-snug">
+            Hamburguesa con queso, lechuga y tomate.
+          </p>
+          <div class="mt-2 font-semibold text-gray-600">$850</div>
+          <div class="text-yellow-600 text-sm mt-2">
+            &starf;&starf;&starf;&starf;&star; 527 reseñas
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-2 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+        <div>
+          <img class="
+                w-full
+                rounded-lg
+                md:rounded-r-sm md:w-48
+                object-cover object-left
+                md:h-full
+              "
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500q=80"
+            alt="Imagen" />
+        </div>
+
+        <div class="
+              relative
+              mx-2
+              shadow-lg
+              md:shadow-none
+              p-2
+              bg-white
+              md:bg-transparent md:py-4
+              -mt-4
+              rounded-lg
+            ">
+          <h2 class="
+                text-xl
+                uppercase
+                font-semibold
+                tracking-tight
+                text-gray-900
+              ">
+            Hamburguesa Detonadora
+          </h2>
+          <p class="text-lg text-gray-700 leading-snug">
+            Hamburguesa con queso, lechuga y tomate.
+          </p>
+          <div class="mt-2 font-semibold text-gray-600">
+            $575
+          </div>
+          <div class="text-yellow-600 text-sm mt-2">
+            &starf;&starf;&starf;&starf;&star; 527 reseñas
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <form action="" class="container mx-auto mt-4">
+        <div>
+          <div>Nombre</div>
+          <input class="
+                w-full
+                leading-snug
+                text-gray-700
+                py-1
+                px-4
+                rounded
+                bg-gray-200
+                placeholder-secondary
+                border border-blue-300
+                hover:bg-white
+                focus:outline-none
+              " type="text" placeholder="Nombre" />
+        </div>
+
+        <div>
+          <div>Email</div>
+          <input class="
+                w-full
+                leading-snug
+                text-gray-700
+                py-1
+                px-4
+                rounded
+                bg-gray-200
+                placeholder-secondary
+                border border-blue-300
+                hover:bg-white
+                focus:outline-none
+              " type="email" placeholder="E-mail" />
+        </div>
+        <div>
+          <div>Comentarios</div>
+          <textarea class="
+                w-full
+                leading-snug
+                text-gray-700
+                py-1
+                px-4
+                rounded
+                bg-gray-200
+                placeholder-secondary
+                border border-blue-300
+                hover:bg-white
+                focus:outline-none
+              " name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="h-10 my-3">
+          <button class="
+                bg-gray-500
+                px-4
+                py-1
+                rounded
+                shadow-xl
+                block
+                mx-auto
+                hover:shadow-none hover:bg-gray-700 hover:text-white
+              ">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="
+        w-full
+        bg-secondary
+        justify-around
+        text-white
+        md:flex md:flex-row-reverse
+      ">
+    <div class="mt-4 ml-8">
+      <div class="hover:text-blue-600">
+        <i class="fab fa-facebook-f"></i> facebook
+      </div>
+      <div class="hover:text-blue-400">
+        <i class="fab fa-twitter"></i> twitter
+      </div>
+      <div class="hover:text-red-600">
+        <i class="fab fa-instagram"></i> instagram
+      </div>
+    </div>
+    <ul class="my-4 ml-8 md:list-disc">
+      <li>Soporte</li>
+      <li>Acerca de nosotros</li>
+      <li>Registro</li>
+      <li>Aviso de privacidad</li>
+    </ul>
+  </footer>
+</body>
+
+</html>
